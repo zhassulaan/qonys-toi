@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 :root {
   --clr-white: #FFF;
   --clr-black: #000;
-  --clr-background: #FAEBD7;
+  --clr-background: #DEB3AD;
+  --clr-border: #BB9096;
+  --clr-gold: #965A00;
+  --clr-pink: #FEDFE3;
 }
 
 *,
@@ -16,6 +22,40 @@
 
 body {
   display: block;
-  width: 100%;
-  background-color: var(--clr-background);
+  width: 88%;
+  /* background-color: var(--clr-background); */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+/* h1 {
+  font-size: 53px;
+  font-weight: 700;
+  letter-spacing: -0.818173px;
+}
+
+h2 {
+  font-size: 33px;
+  letter-spacing: .25px;
+} */
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* h4 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+} */
+
+h5 {
+  font-size: 14px;
+  font-weight: 500;
 }

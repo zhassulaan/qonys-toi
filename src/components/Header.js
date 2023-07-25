@@ -1,9 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function Header() {
 	return (
-		<div>Header</div>
+		<Wrapper>
+			Окно
+		</Wrapper>
 	);
 }
+
+const Wrapper = styled.header`
+  position: fixed;
+	display: none;
+`
 
 export default Header;

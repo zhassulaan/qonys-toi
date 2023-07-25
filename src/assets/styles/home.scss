@@ -1,0 +1,32 @@
+.home {
+	margin-top: 36px;
+	&-box {
+		text-align: center;
+		width: 100%;
+		background-color: var(--clr-pink);
+		color: var(--clr-gold);
+		border-radius: 8px;
+		padding: 14px;
+		&__inner {
+			border: 1px solid #BB9096;
+			padding: 12px;
+		}
+	}
+	&-title,
+	&-subtitle {
+		margin-bottom: 8px;
+	}
+	&-title {
+		font-family: 'Pacifico', cursive;
+	}
+	&-image {
+		width: 60%;
+		margin: 24px 0;
+	}
+	&-counter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+}
