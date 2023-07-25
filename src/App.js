@@ -1,10 +1,21 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import Header from './components/Header';
+import Home from './views/Home';
+import NoMatch from './views/NoMatch';
 
 function App() {
   return (
-    <div>
-      <p>Dilnaz</p>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={ <Home /> } />
+      </Routes>
+    </Router>
   );
 }
 
