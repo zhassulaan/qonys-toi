@@ -6,7 +6,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './views/Home';
+import Home from './pages/Home';
 
 function App() {
   return (

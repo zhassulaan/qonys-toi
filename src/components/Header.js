@@ -14,6 +14,7 @@ function Header() {
 
 	return (
 		<div className='header'>
+			<div className='header-background'></div>
 			{ music ?
 				<div class="header-player" onClick={ togglePlay }>
 					<span className='header-player__icon'></span>
