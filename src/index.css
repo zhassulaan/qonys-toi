@@ -5,10 +5,10 @@
   --clr-white: #FFF;
   --clr-black: #000;
   --clr-green: #85AB7B;;
+  --clr-grey: #B1B1B1;
 
   --clr-background: #DEB3AD;
   --clr-border: #BB9096;
-  --clr-gold: #965A00;
   --clr-pink: #FEDFE3;
 }
 
@@ -28,25 +28,37 @@ body {
   margin: 0 auto;
 }
 
-h1, h2 {
+h1, h2, h3, h5 {
   color: var(--clr-green);
 }
 
-h1, h5 {
+h1, h2, h5 {
+  font-family: 'Pacifico', cursive;
+}
+
+h1, h6 {
   font-weight: 600;
 }
 
 h1 {
   font-size: 58px;
   font-weight: 400;
+  line-height: 12vh;
   letter-spacing: .25px;
 }
 
-h2, h4 {
+h2 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 8.725vh;
+  letter-spacing: .25px;
+}
+
+h3, h4 {
   font-weight: 500;
 }
 
-h2 {
+h3 {
   font-size: 44px;
   line-height: 6.375vh;
 }
@@ -56,12 +68,6 @@ h4 {
   line-height: 2.3vh;
 }
 
-/* h4 {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.15px;
-} */
-
-h5 {
-  font-size: 18px;
+h6 {
+  font-size: 16px;
 }

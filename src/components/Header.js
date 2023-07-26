@@ -16,15 +16,15 @@ function Header() {
 		<div className='header'>
 			<div className='header-background'></div>
 			{ music ?
-				<div class="header-player" onClick={ togglePlay }>
+				<div className='header-player' onClick={ togglePlay }>
 					<span className='header-player__icon'></span>
 				</div>
 					:
-				<div class="header-stop" onClick={ togglePlay }>
+				<div className='header-stop' onClick={ togglePlay }>
 					<span className='header-stop__icon'></span>
 				</div>
 			}
-			<div class="header-menu" onClick={ toggleMenu }>
+			<div className='header-menu' onClick={ toggleMenu }>
 				<span className={ `header-menu__icon ${ menu ? 'active' : '' }` }></span>
 			</div>
 		</div>

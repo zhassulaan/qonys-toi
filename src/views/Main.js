@@ -1,19 +1,30 @@
-import React from 'react';
-import house from '../assets/images/house.png';
+import React, { useState, useEffect } from 'react';
+import { getTimeDifference } from '../utils/date';
 import Counter from '../components/Counter';
+import house from '../assets/images/house.png';
 
 function Main() {
+	const target_date = new Date('2023-08-19T13:00:00');
+	const [countdown, setCountdown] = useState(getTimeDifference(target_date));
+
+	useEffect(() => {
+    const interval = setInterval(() => {
+      setCountdown(getTimeDifference(target_date));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [target_date]);
+
 	return (
-		<div className='home'>
-			<div className='home-background'></div>
-			<h1 className='home-title'>Қоныс той</h1>
-			<h5 className='home-subtitle'>19 тамыз 2023</h5>
-			<img src={ house } alt="house icon" className='home-image' />
-			<div className="home-counter">
-				<Counter time={ 10 } label={ 'күн' } />
-				<Counter time={ 10 } label={ 'сағат' } />
-				<Counter time={ 10 } label={ 'минут' } />
-				<Counter time={ 10 } label={ 'секунд' } />
+		<div className='home-content main' id='main'>
+			<h1 className='home-content__title'>Қоныс той</h1>
+			<h6 className='home-content__subtitle'>19 тамыз 2023</h6>
+			<img src={ house } alt='house icon' className='home-content__image' />
+			<div className='home-content__counter'>
+				<Counter time={ countdown.days } label={ 'күн' } />
+				<Counter time={ countdown.hours } label={ 'сағат' } />
+				<Counter time={ countdown.minutes } label={ 'минут' } />
+				<Counter time={ countdown.seconds } label={ 'секунд' } />
 			</div>
 		</div>
 	);

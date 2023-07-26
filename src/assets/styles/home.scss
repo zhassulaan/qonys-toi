@@ -1,8 +1,10 @@
 .home {
 	position: relative;
 	height: 100vh;
-	text-align: center;
-	padding-top: 19vh;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	overflow: hidden;
+	touch-action: none;
 	&-background {
 		position: fixed;
 		top: 0;
@@ -15,25 +17,46 @@
 		opacity: .65;
 		z-index: -1;
 	}
-	&-title,
-	&-subtitle {
-		margin-bottom: 1.675vh;
+	&-content {
+		height: 100vh;
+		scroll-snap-align: center;
+		text-align: center;
+		padding-top: 20vh;
+		&__title,
+		&__subtitle {
+			margin-bottom: 1.675vh;
+		}
+		&__subtitle {
+			line-height: 2.6vh;
+		}
+		&__image {
+			width: 75%;
+			margin: 7.2vh 0;
+		}
+		&__counter {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 24px;
+		}
+		&__description {
+			line-height: 3.275vh;
+			margin: 7.5vh 0 4.275vh;
+		}
+		&__icon {
+			height: 16vh;
+		}
 	}
-	&-title {
-		font-family: 'Pacifico', cursive;
-		line-height: 12vh;
-	}
-	&-subtitle {
-		line-height: 2.6vh;
-	}
-	&-image {
-		width: 75%;
-		margin: 7.2vh 0;
-	}
-	&-counter {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 24px;
+	.time {
+		&-label {
+			margin-bottom: 1.25vh;
+		}
+		&-date {
+			font-size: 42px;
+			line-height: 6.25vh;
+		}
+		.calendar {
+			margin: 7.5vh auto;
+		}
 	}
 }

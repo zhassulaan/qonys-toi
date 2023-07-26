@@ -1,0 +1,55 @@
+@keyframes pulse {
+  0% {
+		top: -25%;
+		left: -25%;
+		width: 150%;
+		height: 150%;
+	} 50% {
+		top: -40%;
+		left: -40%;
+		width: 180%;
+		height: 180%;
+	} 100% {
+		top: -25%;
+		left: -25%;
+		width: 150%;
+		height: 150%;
+	}
+}
+
+.calendar {
+	width: max-content;
+	&-header {
+		margin-bottom: 1.9vh;
+		padding-bottom: 1.175vh;
+		border-bottom: 1px solid var(--clr-grey);
+	}
+	&-header,
+	&-week {
+		display: flex;
+		gap: 16px;
+	}
+	&-header__label,
+	&-week__day {
+		width: 21px;
+		height: 2.5vh;
+		color: var(--clr-green);
+	}
+	&-week {
+		margin-top: 1.175vh;
+		.active {
+			position: relative;
+			&-icon {
+				position: absolute;
+				top: -25%;
+				left: -25%;
+				width: 150%;
+				height: 150%;
+				color: var(--clr-grey);
+				opacity: .5;
+				z-index: -1;
+				animation: pulse 1.25s infinite;
+			}
+		}
+	}
+}
