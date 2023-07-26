@@ -1,0 +1,116 @@
+.header {
+	position: fixed;
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	justify-content: flex-end;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: var(--clr-white);
+	padding: 0 6%;
+	&-player,
+	&-menu {
+		cursor: pointer;
+	}
+	&-player,
+	&-stop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		background-color: var(--clr-black);
+		border-radius: 50%;
+	}
+	&-player {
+		transform: rotate(90deg);
+		padding-bottom: 5px;
+		&__icon {
+			position: relative;
+			width: 10px;
+			height: 10px;
+			text-align: left;
+			background-color: var(--clr-white);
+			border-top-right-radius: 30%;
+			transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				background-color: inherit;
+				border-top-right-radius: 30%;
+			}
+			&::before {
+				transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+			}
+			&::after {
+				transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+			}
+		}
+	}
+	&-stop {
+		position: relative;
+		&__icon {
+			&::before,
+			&::after {
+				position: absolute;
+				content: '';
+				top: 50%;
+				width: 3px;
+				height: 16px;
+				background-color: var(--clr-white);
+				border-radius: 5%;
+				transform: translateY(-50%);
+			}
+			&::before {
+				left: 14px;
+			}
+			&::after {
+				right: 14px;
+			}
+		}
+	}
+	&-menu {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+		&__icon,
+		&__icon::before,
+		&__icon::after {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: var(--clr-black);
+			transition: transform .3s ease-in-out;
+		}
+		&__icon {
+			top: 50%;
+			transform: translateY(-50%);
+			&::before,
+			&::after {
+				content: '';
+			}
+			&::before {
+				top: -8px;
+			}
+			&::after {
+				bottom: -8px;
+			}
+		}
+		.active {
+			transform: rotate(45deg);
+			&::before {
+				transform: rotate(-90deg) translate(-8px, 0);
+			}
+			&::after {
+				transform: rotate(-90deg) translate(8px, 0);
+			}
+		}
+  }
+}
