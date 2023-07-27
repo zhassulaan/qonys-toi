@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { FullpageSection } from '@ap.cx/react-fullpage';
+import React, { useState, useEffect, useMemo } from 'react';
 import { getTimeDifference } from '../utils/date';
 import Counter from '../components/Counter';
 import house from '../assets/images/house.png';
 
 function Main() {
-	const target_date = new Date('2023-08-19T13:00:00');
+	const target_date = useMemo(() => new Date('2023-08-19T13:00:00'), []);
 	const [countdown, setCountdown] = useState(getTimeDifference(target_date));
 
 	useEffect(() => {
