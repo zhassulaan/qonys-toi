@@ -15,7 +15,7 @@ function Form() {
 
 	function submit() {
 		if (firstName === '' || secondName === '' || !visit) {
-			setError('Барлығы дұрыстап толтырыңыз');
+			setError('Барлығын дұрыстап толтырыңыз');
 			setModal(true);
 		} else {
 			setError('');
@@ -27,6 +27,15 @@ function Form() {
 				console.log('success', res.status);
 			})
 		}
+	}
+
+	function close() {
+		setModal(false);
+		setError('');
+		setMessage('');
+		setFirstName('');
+		setSecondName('');
+		setVisit(null);
 	}
 
 	return (
@@ -50,7 +59,7 @@ function Form() {
 				<Button text={ 'Жіберу' } action={ () => submit() } />
 				<p className='form-body__text'>Қонақ санын нақты есептей алуымыз үшін анкетаны бір-ақ рет толтырыңызды сұраймыз</p>
 			</div>
-			{ modal ? <Modal text={ message } error_text={ error } closeModal={ () => setModal(false) } /> : null }
+			{ modal ? <Modal text={ message } error_text={ error } closeModal={ () => close() } /> : null }
 		</div>
 	);
 }
