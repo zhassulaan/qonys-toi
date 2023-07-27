@@ -82,3 +82,9 @@ a {
 .input_error {
   border: 1px solid var(--clr-red);
 }
+
+@media screen and (min-width: 480px) {
+	body {
+		display: none;
+	}
+}
