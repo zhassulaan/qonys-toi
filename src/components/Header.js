@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Howl } from 'howler';
-import mp3 from '../assets/toi.mp3';
+import music from '../assets/music.mp3';
 import '../assets/styles/header.scss';
 
 function Header({ isOpened, openMenu }) {
@@ -14,7 +14,7 @@ function Header({ isOpened, openMenu }) {
 	function playAudio() {
 		setIsPlaying(true);
 		const sound = new Howl({
-			src: [mp3],
+			src: [music],
 			onload: () => {
 				sound.seek(audioPosition);
 				sound.play();

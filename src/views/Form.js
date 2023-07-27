@@ -34,7 +34,7 @@ function Form() {
 			<h2 className='home-content__title'>Анкета</h2>
 			<div className='form-body'>
 				<div className='form-body__background'></div>
-				<p className='form-body__text'>Тіркелуші қонақтың жасы 16 дан жоғары болуы тиіс</p>
+				<p className='form-body__text'>Тіркелуші қонақтың жасы 16-дан жоғары болуы тиіс</p>
 				<div className='form-body__input'>
 					<p className='form-body__input-label'>Аты-жөніңіз</p>
 					<Input name={ 'first_fullname' } value={ firstName } action={ (e) => setFirstName(e.target.value) } error={ error } />
