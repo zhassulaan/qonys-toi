@@ -4,9 +4,9 @@ import styled from 'styled-components';
 function Alert() {
 	return (
 		<Wrapper>
-			<p className="title">!</p>
-			<p className="text">Шақырту тек мобильді құрғыларға ғана қолжетімді</p>
-			<p className="subtext">(Егерде ұялы телефон қолданып жатсыңыз, құрылғыңызды бұрыңыз)</p>
+			<p className='title'>!</p>
+			<p className='text'>Шақырту тек мобильді құрғыларға ғана қолжетімді</p>
+			<p className='subtext'>(Егерде ұялы телефон қолданып жатсыңыз, құрылғыңызды бұрыңыз)</p>
 		</Wrapper>
 	);
 }

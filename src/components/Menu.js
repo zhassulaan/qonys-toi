@@ -1,26 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { scroller } from 'react-scroll';
 import { styled } from 'styled-components';
 
 function Menu({ isOpened, closeMenu }) {
 	const current_year = new Date().getFullYear();
-	
-	function handleScroll(elementId) {
-		console.log(scroller)
-    scroller.scrollTo(elementId, {
-      smooth: true,
-      duration: 500,
-    });
+	const [pageHeight, setPageHeight] = useState(0);
+	const [sections, setSections] = useState([]);
+	const perPage = useRef(0);
 
-    closeMenu();
-  };
+	useEffect(() => {
+		setPageHeight(document.body.scrollHeight);
+		setSections(Array.from(document.querySelectorAll('.home-content')));
+		// perPage = pageHeight / sections.length;
+	}, [pageHeight]);
+
+	function handleScroll(sectionId) {
+    const sectionIndex = sections.findIndex((section) => section.id === sectionId);
+    // const scrollToPosition = perPage * sectionIndex;
+		console.log(pageHeight);
+
+    // window.scrollTo({
+    //   top: scrollToPosition,
+    //   behavior: 'smooth',
+    // });
+  }
 
 	return (
 		<Wrapper>
 			<div className={ `background ${ isOpened ? 'active' : '' }` } onClick={ closeMenu }></div>
 			<div className={ `body ${ isOpened ? 'active' : '' }` }>
 				<ul className='body-list'>
+					<li>
+						<span className='body-list__link' onClick={ () => handleScroll('main') }></span>
+					</li>
 					<li>
 						<span className='body-list__link' onClick={ () => handleScroll('info') }>Шақырту</span>
 					</li>

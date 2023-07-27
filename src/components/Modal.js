@@ -6,7 +6,7 @@ function Modal({ text, error_text, closeModal }) {
 		<Wrapper>
 			<div className='background' onClick={ closeModal }></div>
 			<div className='body'>
-				<div className="body-close" onClick={ closeModal }>
+				<div className='body-close' onClick={ closeModal }>
 					<span className='body-close__icon'></span>
 				</div>
 				{ error_text ?
