@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import rotate from '../assets/images/rotate.svg';
 
 function Alert() {
 	return (
