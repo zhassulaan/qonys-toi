@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FullpageSection } from '@ap.cx/react-fullpage';
 import { getTimeDifference } from '../utils/date';
 import Counter from '../components/Counter';
 import house from '../assets/images/house.png';

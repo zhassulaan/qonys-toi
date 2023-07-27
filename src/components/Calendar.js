@@ -29,9 +29,9 @@ function Calendar() {
 
 	return (
 		<div className='calendar'>
-			<div class='calendar-header'>
+			<div className='calendar-header'>
 				{ weekday_names.map((name, idx) =>
-					<p class='calendar-header__label' key={ idx }>{ name }</p>
+					<p className='calendar-header__label' key={ idx }>{ name }</p>
 				) }
 			</div>
 			{ calendar.map((week, idx) => (

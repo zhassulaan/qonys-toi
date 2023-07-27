@@ -1,10 +1,4 @@
 .home {
-	position: relative;
-	height: 100vh;
-	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
-	overflow: hidden;
-	touch-action: none;
 	&-background {
 		position: fixed;
 		top: 0;
@@ -19,8 +13,10 @@
 	}
 	&-content {
 		height: 100vh;
+		width: 88%;
 		scroll-snap-align: center;
 		text-align: center;
+		margin: 0 auto;
 		padding-top: 20vh;
 		&__title,
 		&__subtitle {
@@ -46,17 +42,48 @@
 		&__icon {
 			height: 16vh;
 		}
-	}
-	.time {
-		&-label {
-			margin-bottom: 1.25vh;
+		&.time {
+			.time-label {
+				margin-bottom: 1.25vh;
+			}
+			.time-date {
+				font-size: 42px;
+				line-height: 6.25vh;
+			}
+			.calendar {
+				margin: 7.5vh auto;
+			}
 		}
-		&-date {
-			font-size: 42px;
-			line-height: 6.25vh;
-		}
-		.calendar {
-			margin: 7.5vh auto;
+		&.form {
+			position: relative;
+			padding-top: 17.875vh;
+			.form-body {
+				position: relative;
+				padding: 2.875vh 5%;
+				&__background {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: var(--clr-green);
+					border-radius: 16px;
+					opacity: .45;
+					z-index: -1;
+				}
+				&__text {
+					text-decoration: underline;
+					font-size: 12px;
+					padding: 1.5vh 0;
+				}
+				&__input {
+					margin-bottom: 3.875vh;
+					&-label {
+						font-weight: 600;
+						margin-bottom: 1.125vh;
+					}
+				}
+			}
 		}
 	}
 }
