@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Howl } from 'howler';
-import mp3 from '../assets/Bagzhan_Oktyabr.mp3';
+import mp3 from '../assets/toi.mp3';
 import '../assets/styles/header.scss';
 
 function Header({ isOpened, openMenu }) {
