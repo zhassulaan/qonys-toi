@@ -18,7 +18,7 @@ function Main() {
 	return (
 		<div className='home-content main' id='main'>
 			<h1 className='home-content__title'>Қоныс той</h1>
-			<h6 className='home-content__subtitle'>19 тамыз 2023</h6>
+			<h6 className='home-content__subtitle'>12 тамыз 2023</h6>
 			<img src={ house } alt='house icon' className='home-content__image' />
 			<div className='home-content__counter'>
 				<Counter time={ countdown.days } label={ 'күн' } />
