@@ -4,7 +4,7 @@ import Counter from '../components/Counter';
 import house from '../assets/images/house.png';
 
 function Main() {
-	const target_date = useMemo(() => new Date('2023-08-19T13:00:00'), []);
+	const target_date = useMemo(() => new Date('2023-08-12T13:00:00'), []);
 	const [countdown, setCountdown] = useState(getTimeDifference(target_date));
 
 	useEffect(() => {
