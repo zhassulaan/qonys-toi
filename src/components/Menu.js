@@ -1,29 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import { styled } from 'styled-components';
 
 function Menu({ isOpened, closeMenu }) {
 	const current_year = new Date().getFullYear();
-	const [pageHeight, setPageHeight] = useState(0);
-	const [sections, setSections] = useState([]);
-	// const perPage = useRef(0);
 
-	useEffect(() => {
-		setPageHeight(document.body.scrollHeight);
-		setSections(Array.from(document.querySelectorAll('.home-content')));
-		// perPage = pageHeight / sections.length;
-	}, [pageHeight]);
+	function handleScroll(elementId) {
+		console.log(scroller)
+		scroller.scrollTo(elementId, {
+			smooth: true,
+			duration: 500,
+		});
 
-	function handleScroll(sectionId) {
-    // const sectionIndex = sections.findIndex((section) => section.id === sectionId);
-    // const scrollToPosition = perPage * sectionIndex;
-		console.log(pageHeight);
-
-    // window.scrollTo({
-    //   top: scrollToPosition,
-    //   behavior: 'smooth',
-    // });
-  }
+		closeMenu();
+	};
 
 	return (
 		<Wrapper>
