@@ -6,7 +6,7 @@ function Menu({ isOpened, closeMenu }) {
 	const current_year = new Date().getFullYear();
 	const [pageHeight, setPageHeight] = useState(0);
 	const [sections, setSections] = useState([]);
-	const perPage = useRef(0);
+	// const perPage = useRef(0);
 
 	useEffect(() => {
 		setPageHeight(document.body.scrollHeight);
@@ -15,7 +15,7 @@ function Menu({ isOpened, closeMenu }) {
 	}, [pageHeight]);
 
 	function handleScroll(sectionId) {
-    const sectionIndex = sections.findIndex((section) => section.id === sectionId);
+    // const sectionIndex = sections.findIndex((section) => section.id === sectionId);
     // const scrollToPosition = perPage * sectionIndex;
 		console.log(pageHeight);
 
