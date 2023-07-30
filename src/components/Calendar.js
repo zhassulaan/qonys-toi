@@ -6,7 +6,7 @@ import '../assets/styles/calendar.scss';
 function Calendar() {
 	const weekday_names = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 	
-	const active_day = 19;
+	const active_day = 12;
 	const date = new Date();
 	const first_day = new Date(date.getFullYear(), 7, 1);
 	const last_day = new Date(date.getFullYear(), 7 + 1, 0);
